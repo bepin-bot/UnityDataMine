@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Libs</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@0.4.x/dist/typography.min.css" />
+    <style>
+        body {
+            margin: auto;
+        }
+    </style>
+</head>
+<body class="prose lg:prose-xl pb-32">
+    <h1>Unity Libs Repository</h1>
+    <p><small>Last updated: {{ now }}</small></p>
+    <p>This page hosts certain assets obtained from different Unity Editor versions. Such assests are primarily useful for Unity modding.</p>
+    <p>At the moment, the following assets are included:</p>
+    <ul>
+        <li>Unity Engine managed DLLs</li>
+        <li>Unity Player Android binaries</li>
+        <li>LibIl2Cpp source and headers</li>
+        <li>UnityMono core libraries</li>
+        <li>NuGet packages of Unity Engine DLLs (see <a href="https://nuget.bepinex.dev/packages/UnityEngine.Modules">UnityEngine.Modules package</a>)</li>
+    </ul>
+
+    <h2>Asset URLS</h2>
+    <p>Both HTTP and HTTPS endpoints are supported.</p>
+
+    <h3>Unity Engine managed DLLs</h3>
+    <pre>https://unity.bepinex.dev/libraries/&lt;unity version&gt;.zip</pre>
+    <p>Replace <code>&lt;unity version&gt;</code> with the Unity version you need.</p>
+    
+    <h3>Unity Player Android binaries</h3>
+    <pre>https://unity.bepinex.dev/android/&lt;unity version&gt;.zip</pre>
+    <p>Replace <code>&lt;unity version&gt;</code> with the Unity version you need.</p>
+
+    <h3>LibIl2Cpp source and headers</h3>
+    <p><strong>NOTE: LibIl2Cpp source is available only since Unity 5.0.2!</strong></p>
+    <pre>https://unity.bepinex.dev/libil2cpp-source/&lt;unity version&gt;.zip</pre>
+    <p>Replace <code>&lt;unity version&gt;</code> with the Unity version you need.</p>
+
+    <h3>UnityMono core libraries</h3>
+    <pre>https://unity.bepinex.dev/corlibs/&lt;unity version&gt;.zip</pre>
+    <p>Replace <code>&lt;unity version&gt;</code> with the Unity version you need.</p>
+
+    <h3>NuGet packages of Unity Engine DLLs</h3>
+    <p>See <a href="https://nuget.bepinex.dev/packages/UnityEngine.Modules">UnityEngine.Modules package</a></p>
+
+    <h2>Build info</h2>
+    <details>
+        <summary>All available Unity versions</summary>
+        <pre class="overflow-y-auto h-96">{% for lib in libs %}
+{{ lib }}{%endfor %}</pre>
+    </details>
+</body>
+</html>

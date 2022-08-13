@@ -1,0 +1,5 @@
+*
+!.gitignore
+!index.jinja2 
+!versions
+!versions/**
